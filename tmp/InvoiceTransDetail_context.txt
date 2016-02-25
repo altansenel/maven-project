@@ -1,0 +1,1807 @@
+
+GENERATOR VARIABLES :
+=====================
+
+* GENERATOR 
+$generator.name    = Telosys Tools Generator
+$generator.version = 2.1.1 
+
+* CURRENT DATE AND TIME 
+$today.date = 24 Þub 2016
+$today.time = 15:13:27
+$today.date("dd/MM/yyyy") = 24/02/2016
+$today.time("HH:mm")      = 15:13
+
+
+GENERATOR CONSTANTS FOR SPECIAL CHARACTERS :
+============================================
+$DOLLAR = $
+$SHARP  = #
+$AMP    = &
+$QUOT   = "
+$LT     = <
+$GT     = >
+$LBRACE = {
+$RBRACE = }
+
+GENERATOR CONSTANTS USABLE AS METHODS PARAMETERS :
+==================================================
+$const.KEY          =  1
+$const.NOT_KEY      =  2
+
+$const.TEXT         =  4
+$const.NOT_TEXT     =  8
+
+$const.IN_LINKS     =  16
+$const.NOT_IN_LINKS =  32
+
+$const.IN_SELECTED_LINKS      = 64
+$const.NOT_IN_SELECTED_LINKS  = 128
+
+$const.getKEY()     = 1
+$const.getNOT_KEY() = 2 
+
+
+PROJECT VARIABLES :
+===================
+
+Project packages ( predefined variables ) :
+$ROOT_PKG   = "org.demo"
+$ENTITY_PKG = "org.demo.bean"
+
+Project folders ( predefined variables ) :
+$SRC      = "src/main/java"
+$RES      = "src/main/resources"
+$WEB      = "src/main/webapp"
+$TEST_SRC = "src/test/java"
+$TEST_RES = "src/test/resources"
+$DOC      = "doc"
+$TMP      = "tmp"
+
+Project variables ( $project.variables ) including predefined variables :
+ . $WEB = src/main/webapp
+ . $ENTITY_PKG = org.demo.bean
+ . $TEST_SRC = src/test/java
+ . $RES = src/main/resources
+ . $DBID = 1
+ . $DOC = doc
+ . $ROOT_PKG = org.demo
+ . $MYVAR = foo
+ . $SRC = src/main/java
+ . $TEST_RES = src/test/resources
+ . $V2 = 22
+ . $TMP = tmp
+
+
+ENTITY VARIABLES :
+==================
+
+* BEAN CLASS
+$entity.name            = InvoiceTransDetail
+$fn.uncapitalize($entity.name) = invoiceTransDetail
+$entity.package         = org.demo.bean
+$entity.databaseTable   = invoice_trans_detail
+$entity.databaseCatalog = seyhan
+$entity.databaseSchema  = 
+
+* BEAN CLASS ATTRIBUTES ( $entity.attributes )
+$entity.attributes.size() = 63 
+$attributes.size() = 63 
+
+* BEAN CLASS JPA ANNOTATIONS ( $jpa.entityAnnotations(2) )
+  @Entity
+  @Table(name="invoice_trans_detail", catalog="seyhan" )
+
+* BEAN CLASS AUTOINCREMTED PRIMARY KEY ?
+ $entity.autoincrementedKeyAttribute.databaseName = id
+
+KEY ATTRIBUTES : 
+ . id : type = Integer , auto-incremented = true
+
+ ------------------------------
+ Field : id
+ ------------------------------
+ Java :
+  $field.name      = id
+  $field.type      = Integer
+  $field.getter    = getId
+  $field.setter    = setId
+  $field.label     = Id
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  @Column(name="id", nullable=false)
+
+ Database :
+  $field.isKeyElement() = true
+  $field.isAutoIncremented() = true
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : receiptNo
+ ------------------------------
+ Java :
+  $field.name      = receiptNo
+  $field.type      = Integer
+  $field.getter    = getReceiptNo
+  $field.setter    = setReceiptNo
+  $field.label     = Receipt no
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Column(name="receipt_no", nullable=false)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = receipt_no
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : right
+ ------------------------------
+ Java :
+  $field.name      = right
+  $field.type      = String
+  $field.getter    = getRight
+  $field.setter    = setRight
+  $field.label     = Right
+  $field.inputType = text
+ Java bean validation annotations :
+  @NotNull
+  @Size( min = 1, max = 50 )
+ JPA annotations :
+  @Column(name="_right", nullable=false, length=50)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = _right
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 50
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transDate
+ ------------------------------
+ Java :
+  $field.name      = transDate
+  $field.type      = Date
+  $field.getter    = getTransDate
+  $field.setter    = setTransDate
+  $field.label     = Trans date
+  $field.inputType = date
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Temporal(TemporalType.DATE)
+  @Column(name="trans_date", nullable=false)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = trans_date
+  $field.databaseType = DATE
+  $field.jdbcTypeCode = 91
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : deliveryDate
+ ------------------------------
+ Java :
+  $field.name      = deliveryDate
+  $field.type      = Date
+  $field.getter    = getDeliveryDate
+  $field.setter    = setDeliveryDate
+  $field.label     = Delivery date
+  $field.inputType = date
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Temporal(TemporalType.DATE)
+  @Column(name="delivery_date")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = delivery_date
+  $field.databaseType = DATE
+  $field.jdbcTypeCode = 91
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transType
+ ------------------------------
+ Java :
+  $field.name      = transType
+  $field.type      = String
+  $field.getter    = getTransType
+  $field.setter    = setTransType
+  $field.label     = Trans type
+  $field.inputType = text
+ Java bean validation annotations :
+  @NotNull
+  @Size( min = 1, max = 6 )
+ JPA annotations :
+  @Column(name="trans_type", nullable=false, length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = trans_type
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : rowNo
+ ------------------------------
+ Java :
+  $field.name      = rowNo
+  $field.type      = Integer
+  $field.getter    = getRowNo
+  $field.setter    = setRowNo
+  $field.label     = Row no
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="row_no")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = row_no
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : stockId
+ ------------------------------
+ Java :
+  $field.name      = stockId
+  $field.type      = Integer
+  $field.getter    = getStockId
+  $field.setter    = setStockId
+  $field.label     = Stock id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="stock_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = stock_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : name
+ ------------------------------
+ Java :
+  $field.name      = name
+  $field.type      = String
+  $field.getter    = getName
+  $field.setter    = setName
+  $field.label     = Name
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 100 )
+ JPA annotations :
+  @Column(name="name", length=100)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = name
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 100
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : quantity
+ ------------------------------
+ Java :
+  $field.name      = quantity
+  $field.type      = Double
+  $field.getter    = getQuantity
+  $field.setter    = setQuantity
+  $field.label     = Quantity
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="quantity")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = quantity
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 1
+
+ ------------------------------
+ Field : unit
+ ------------------------------
+ Java :
+  $field.name      = unit
+  $field.type      = String
+  $field.getter    = getUnit
+  $field.setter    = setUnit
+  $field.label     = Unit
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 6 )
+ JPA annotations :
+  @Column(name="unit", length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : unitRatio
+ ------------------------------
+ Java :
+  $field.name      = unitRatio
+  $field.type      = Double
+  $field.getter    = getUnitRatio
+  $field.setter    = setUnitRatio
+  $field.label     = Unit ratio
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="unit_ratio")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit_ratio
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 1
+
+ ------------------------------
+ Field : basePrice
+ ------------------------------
+ Java :
+  $field.name      = basePrice
+  $field.type      = Double
+  $field.getter    = getBasePrice
+  $field.setter    = setBasePrice
+  $field.label     = Base price
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="base_price")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = base_price
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : price
+ ------------------------------
+ Java :
+  $field.name      = price
+  $field.type      = Double
+  $field.getter    = getPrice
+  $field.setter    = setPrice
+  $field.label     = Price
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="price")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = price
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : taxRate
+ ------------------------------
+ Java :
+  $field.name      = taxRate
+  $field.type      = Double
+  $field.getter    = getTaxRate
+  $field.setter    = setTaxRate
+  $field.label     = Tax rate
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="tax_rate")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = tax_rate
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : taxRate2
+ ------------------------------
+ Java :
+  $field.name      = taxRate2
+  $field.type      = Double
+  $field.getter    = getTaxRate2
+  $field.setter    = setTaxRate2
+  $field.label     = Tax rate2
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="tax_rate2")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = tax_rate2
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : taxRate3
+ ------------------------------
+ Java :
+  $field.name      = taxRate3
+  $field.type      = Double
+  $field.getter    = getTaxRate3
+  $field.setter    = setTaxRate3
+  $field.label     = Tax rate3
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="tax_rate3")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = tax_rate3
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : discountRate1
+ ------------------------------
+ Java :
+  $field.name      = discountRate1
+  $field.type      = Double
+  $field.getter    = getDiscountRate1
+  $field.setter    = setDiscountRate1
+  $field.label     = Discount rate1
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="discount_rate1")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = discount_rate1
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : discountRate2
+ ------------------------------
+ Java :
+  $field.name      = discountRate2
+  $field.type      = Double
+  $field.getter    = getDiscountRate2
+  $field.setter    = setDiscountRate2
+  $field.label     = Discount rate2
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="discount_rate2")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = discount_rate2
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : discountRate3
+ ------------------------------
+ Java :
+  $field.name      = discountRate3
+  $field.type      = Double
+  $field.getter    = getDiscountRate3
+  $field.setter    = setDiscountRate3
+  $field.label     = Discount rate3
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="discount_rate3")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = discount_rate3
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : amount
+ ------------------------------
+ Java :
+  $field.name      = amount
+  $field.type      = Double
+  $field.getter    = getAmount
+  $field.setter    = setAmount
+  $field.label     = Amount
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="amount")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = amount
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : taxAmount
+ ------------------------------
+ Java :
+  $field.name      = taxAmount
+  $field.type      = Double
+  $field.getter    = getTaxAmount
+  $field.setter    = setTaxAmount
+  $field.label     = Tax amount
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="tax_amount")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = tax_amount
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : discountAmount
+ ------------------------------
+ Java :
+  $field.name      = discountAmount
+  $field.type      = Double
+  $field.getter    = getDiscountAmount
+  $field.setter    = setDiscountAmount
+  $field.label     = Discount amount
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="discount_amount")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = discount_amount
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : total
+ ------------------------------
+ Java :
+  $field.name      = total
+  $field.type      = Double
+  $field.getter    = getTotal
+  $field.setter    = setTotal
+  $field.label     = Total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : description
+ ------------------------------
+ Java :
+  $field.name      = description
+  $field.type      = String
+  $field.getter    = getDescription
+  $field.setter    = setDescription
+  $field.label     = Description
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 100 )
+ JPA annotations :
+  @Column(name="description", length=100)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = description
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 100
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transYear
+ ------------------------------
+ Java :
+  $field.name      = transYear
+  $field.type      = Integer
+  $field.getter    = getTransYear
+  $field.setter    = setTransYear
+  $field.label     = Trans year
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="trans_year")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = trans_year
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transMonth
+ ------------------------------
+ Java :
+  $field.name      = transMonth
+  $field.type      = String
+  $field.getter    = getTransMonth
+  $field.setter    = setTransMonth
+  $field.label     = Trans month
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 7 )
+ JPA annotations :
+  @Column(name="trans_month", length=7)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = trans_month
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 7
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : unit1
+ ------------------------------
+ Java :
+  $field.name      = unit1
+  $field.type      = String
+  $field.getter    = getUnit1
+  $field.setter    = setUnit1
+  $field.label     = Unit1
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 6 )
+ JPA annotations :
+  @Column(name="unit1", length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit1
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : unit2
+ ------------------------------
+ Java :
+  $field.name      = unit2
+  $field.type      = String
+  $field.getter    = getUnit2
+  $field.setter    = setUnit2
+  $field.label     = Unit2
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 6 )
+ JPA annotations :
+  @Column(name="unit2", length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit2
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : unit3
+ ------------------------------
+ Java :
+  $field.name      = unit3
+  $field.type      = String
+  $field.getter    = getUnit3
+  $field.setter    = setUnit3
+  $field.label     = Unit3
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 6 )
+ JPA annotations :
+  @Column(name="unit3", length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit3
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : unit2ratio
+ ------------------------------
+ Java :
+  $field.name      = unit2ratio
+  $field.type      = Double
+  $field.getter    = getUnit2ratio
+  $field.setter    = setUnit2ratio
+  $field.label     = Unit2ratio
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="unit2ratio")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit2ratio
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : unit3ratio
+ ------------------------------
+ Java :
+  $field.name      = unit3ratio
+  $field.type      = Double
+  $field.getter    = getUnit3ratio
+  $field.setter    = setUnit3ratio
+  $field.label     = Unit3ratio
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="unit3ratio")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = unit3ratio
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : excCode
+ ------------------------------
+ Java :
+  $field.name      = excCode
+  $field.type      = String
+  $field.getter    = getExcCode
+  $field.setter    = setExcCode
+  $field.label     = Exc code
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 3 )
+ JPA annotations :
+  @Column(name="exc_code", length=3)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = exc_code
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 3
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : excRate
+ ------------------------------
+ Java :
+  $field.name      = excRate
+  $field.type      = Double
+  $field.getter    = getExcRate
+  $field.setter    = setExcRate
+  $field.label     = Exc rate
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="exc_rate")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = exc_rate
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : excEquivalent
+ ------------------------------
+ Java :
+  $field.name      = excEquivalent
+  $field.type      = Double
+  $field.getter    = getExcEquivalent
+  $field.setter    = setExcEquivalent
+  $field.label     = Exc equivalent
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="exc_equivalent")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = exc_equivalent
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : plusFactorAmount
+ ------------------------------
+ Java :
+  $field.name      = plusFactorAmount
+  $field.type      = Double
+  $field.getter    = getPlusFactorAmount
+  $field.setter    = setPlusFactorAmount
+  $field.label     = Plus factor amount
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="plus_factor_amount")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = plus_factor_amount
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : minusFactorAmount
+ ------------------------------
+ Java :
+  $field.name      = minusFactorAmount
+  $field.type      = Double
+  $field.getter    = getMinusFactorAmount
+  $field.setter    = setMinusFactorAmount
+  $field.label     = Minus factor amount
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="minus_factor_amount")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = minus_factor_amount
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : serialNo
+ ------------------------------
+ Java :
+  $field.name      = serialNo
+  $field.type      = String
+  $field.getter    = getSerialNo
+  $field.setter    = setSerialNo
+  $field.label     = Serial no
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 100 )
+ JPA annotations :
+  @Column(name="serial_no", length=100)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = serial_no
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 100
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : input
+ ------------------------------
+ Java :
+  $field.name      = input
+  $field.type      = Double
+  $field.getter    = getInput
+  $field.setter    = setInput
+  $field.label     = Input
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="input")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = input
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : output
+ ------------------------------
+ Java :
+  $field.name      = output
+  $field.type      = Double
+  $field.getter    = getOutput
+  $field.setter    = setOutput
+  $field.label     = Output
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="output")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = output
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : inTotal
+ ------------------------------
+ Java :
+  $field.name      = inTotal
+  $field.type      = Double
+  $field.getter    = getInTotal
+  $field.setter    = setInTotal
+  $field.label     = In total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="in_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = in_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : outTotal
+ ------------------------------
+ Java :
+  $field.name      = outTotal
+  $field.type      = Double
+  $field.getter    = getOutTotal
+  $field.setter    = setOutTotal
+  $field.label     = Out total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="out_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = out_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : isReturn
+ ------------------------------
+ Java :
+  $field.name      = isReturn
+  $field.type      = Boolean
+  $field.getter    = getIsReturn
+  $field.setter    = setIsReturn
+  $field.label     = Is return
+  $field.inputType = checkbox
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="is_return")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = is_return
+  $field.databaseType = BIT
+  $field.jdbcTypeCode = -7
+  $field.databaseSize = 0
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : retInput
+ ------------------------------
+ Java :
+  $field.name      = retInput
+  $field.type      = Double
+  $field.getter    = getRetInput
+  $field.setter    = setRetInput
+  $field.label     = Ret input
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="ret_input")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = ret_input
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : retOutput
+ ------------------------------
+ Java :
+  $field.name      = retOutput
+  $field.type      = Double
+  $field.getter    = getRetOutput
+  $field.setter    = setRetOutput
+  $field.label     = Ret output
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="ret_output")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = ret_output
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : retInTotal
+ ------------------------------
+ Java :
+  $field.name      = retInTotal
+  $field.type      = Double
+  $field.getter    = getRetInTotal
+  $field.setter    = setRetInTotal
+  $field.label     = Ret in total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="ret_in_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = ret_in_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : retOutTotal
+ ------------------------------
+ Java :
+  $field.name      = retOutTotal
+  $field.type      = Double
+  $field.getter    = getRetOutTotal
+  $field.setter    = setRetOutTotal
+  $field.label     = Ret out total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="ret_out_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = ret_out_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : netInput
+ ------------------------------
+ Java :
+  $field.name      = netInput
+  $field.type      = Double
+  $field.getter    = getNetInput
+  $field.setter    = setNetInput
+  $field.label     = Net input
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="net_input")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = net_input
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : netOutput
+ ------------------------------
+ Java :
+  $field.name      = netOutput
+  $field.type      = Double
+  $field.getter    = getNetOutput
+  $field.setter    = setNetOutput
+  $field.label     = Net output
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="net_output")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = net_output
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : netInTotal
+ ------------------------------
+ Java :
+  $field.name      = netInTotal
+  $field.type      = Double
+  $field.getter    = getNetInTotal
+  $field.setter    = setNetInTotal
+  $field.label     = Net in total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="net_in_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = net_in_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : netOutTotal
+ ------------------------------
+ Java :
+  $field.name      = netOutTotal
+  $field.type      = Double
+  $field.getter    = getNetOutTotal
+  $field.setter    = setNetOutTotal
+  $field.label     = Net out total
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="net_out_total")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = net_out_total
+  $field.databaseType = DOUBLE
+  $field.jdbcTypeCode = 8
+  $field.databaseSize = 22
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+
+ ------------------------------
+ Field : hasCostEffect
+ ------------------------------
+ Java :
+  $field.name      = hasCostEffect
+  $field.type      = Boolean
+  $field.getter    = getHasCostEffect
+  $field.setter    = setHasCostEffect
+  $field.label     = Has cost effect
+  $field.inputType = checkbox
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="has_cost_effect")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = has_cost_effect
+  $field.databaseType = BIT
+  $field.jdbcTypeCode = -7
+  $field.databaseSize = 0
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 1
+
+ ------------------------------
+ Field : transId
+ ------------------------------
+ Java :
+  $field.name      = transId
+  $field.type      = Integer
+  $field.getter    = getTransId
+  $field.setter    = setTransId
+  $field.label     = Trans id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="trans_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = trans_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : depotId
+ ------------------------------
+ Java :
+  $field.name      = depotId
+  $field.type      = Integer
+  $field.getter    = getDepotId
+  $field.setter    = setDepotId
+  $field.label     = Depot id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="depot_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = depot_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : contactId
+ ------------------------------
+ Java :
+  $field.name      = contactId
+  $field.type      = Integer
+  $field.getter    = getContactId
+  $field.setter    = setContactId
+  $field.label     = Contact id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="contact_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = contact_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : sellerId
+ ------------------------------
+ Java :
+  $field.name      = sellerId
+  $field.type      = Integer
+  $field.getter    = getSellerId
+  $field.setter    = setSellerId
+  $field.label     = Seller id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="seller_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = seller_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transSourceId
+ ------------------------------
+ Java :
+  $field.name      = transSourceId
+  $field.type      = Integer
+  $field.getter    = getTransSourceId
+  $field.setter    = setTransSourceId
+  $field.label     = Trans source id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="trans_source_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = trans_source_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : transPointId
+ ------------------------------
+ Java :
+  $field.name      = transPointId
+  $field.type      = Integer
+  $field.getter    = getTransPointId
+  $field.setter    = setTransPointId
+  $field.label     = Trans point id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="trans_point_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = trans_point_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : privateCodeId
+ ------------------------------
+ Java :
+  $field.name      = privateCodeId
+  $field.type      = Integer
+  $field.getter    = getPrivateCodeId
+  $field.setter    = setPrivateCodeId
+  $field.label     = Private code id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="private_code_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = private_code_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : parentId
+ ------------------------------
+ Java :
+  $field.name      = parentId
+  $field.type      = Integer
+  $field.getter    = getParentId
+  $field.setter    = setParentId
+  $field.label     = Parent id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="parent_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = parent_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : parentRight
+ ------------------------------
+ Java :
+  $field.name      = parentRight
+  $field.type      = String
+  $field.getter    = getParentRight
+  $field.setter    = setParentRight
+  $field.label     = Parent right
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 30 )
+ JPA annotations :
+  @Column(name="parent_right", length=30)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = parent_right
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 30
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : statusId
+ ------------------------------
+ Java :
+  $field.name      = statusId
+  $field.type      = Integer
+  $field.getter    = getStatusId
+  $field.setter    = setStatusId
+  $field.label     = Status id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="status_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = status_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : workspace
+ ------------------------------
+ Java :
+  $field.name      = workspace
+  $field.type      = Integer
+  $field.getter    = getWorkspace
+  $field.setter    = setWorkspace
+  $field.label     = Workspace
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Column(name="workspace", nullable=false)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = workspace
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+

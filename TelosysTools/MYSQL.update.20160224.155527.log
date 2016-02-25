@@ -1,0 +1,251 @@
+Update date : Wed Feb 24 15:55:27 EET 2016
+ 
+ Table 'admin_document' found in repository
+ (=) table 'admin_document' unchanged
+ 
+ Table 'admin_document_field' found in repository
+ (=) table 'admin_document_field' unchanged
+ 
+ Table 'admin_document_target' found in repository
+ (=) table 'admin_document_target' unchanged
+ 
+ Table 'admin_extra_fields' found in repository
+ (=) table 'admin_extra_fields' unchanged
+ 
+ Table 'admin_setting' found in repository
+ (=) table 'admin_setting' unchanged
+ 
+ Table 'admin_user' found in repository
+ (=) table 'admin_user' unchanged
+ 
+ Table 'admin_user_audit' found in repository
+ (=) table 'admin_user_audit' unchanged
+ 
+ Table 'admin_user_given_role' found in repository
+ (=) table 'admin_user_given_role' unchanged
+ 
+ Table 'admin_user_group' found in repository
+ (=) table 'admin_user_group' unchanged
+ 
+ Table 'admin_user_right' found in repository
+ (=) table 'admin_user_right' unchanged
+ 
+ Table 'admin_user_role' found in repository
+ (=) table 'admin_user_role' unchanged
+ 
+ Table 'admin_workspace' found in repository
+ (=) table 'admin_workspace' unchanged
+ 
+ Table 'bank' found in repository
+ (=) table 'bank' unchanged
+ 
+ Table 'bank_expense' found in repository
+ (=) table 'bank_expense' unchanged
+ 
+ Table 'bank_trans' found in repository
+ (=) table 'bank_trans' unchanged
+ 
+ Table 'bank_trans_source' found in repository
+ (=) table 'bank_trans_source' unchanged
+ 
+ Table 'chqbll_detail_history' found in repository
+ (=) table 'chqbll_detail_history' unchanged
+ 
+ Table 'chqbll_detail_partial' found in repository
+ (=) table 'chqbll_detail_partial' unchanged
+ 
+ Table 'chqbll_payroll' found in repository
+ (=) table 'chqbll_payroll' unchanged
+ 
+ Table 'chqbll_payroll_detail' found in repository
+ (=) table 'chqbll_payroll_detail' unchanged
+ 
+ Table 'chqbll_payroll_source' found in repository
+ (=) table 'chqbll_payroll_source' unchanged
+ 
+ Table 'chqbll_trans' found in repository
+ (=) table 'chqbll_trans' unchanged
+ 
+ Table 'chqbll_trans_detail' found in repository
+ (=) table 'chqbll_trans_detail' unchanged
+ 
+ Table 'chqbll_type' found in repository
+ (=) table 'chqbll_type' unchanged
+ 
+ Table 'contact' found in repository
+ (=) table 'contact' unchanged
+ 
+ Table 'contact_category' found in repository
+ (=) table 'contact_category' unchanged
+ 
+ Table 'contact_extra_fields' found in repository
+ (=) table 'contact_extra_fields' unchanged
+ 
+ Table 'contact_trans' found in repository
+ (=) table 'contact_trans' unchanged
+ 
+ Table 'contact_trans_source' found in repository
+ (=) table 'contact_trans_source' unchanged
+ 
+ Table 'global_currency' found in repository
+ (=) table 'global_currency' unchanged
+ 
+ Table 'global_currency_rate' found in repository
+ (=) table 'global_currency_rate' unchanged
+ 
+ Table 'global_currency_rate_detail' found in repository
+ (=) table 'global_currency_rate_detail' unchanged
+ 
+ Table 'global_private_code' found in repository
+ (=) table 'global_private_code' unchanged
+ 
+ Table 'global_profile' found in repository
+ (=) table 'global_profile' unchanged
+ 
+ Table 'global_trans_point' found in repository
+ (=) table 'global_trans_point' unchanged
+ 
+ Table 'invoice_trans' found in repository
+ (=) table 'invoice_trans' unchanged
+ 
+ Table 'invoice_trans_currency' found in repository
+ (=) table 'invoice_trans_currency' unchanged
+ 
+ Table 'invoice_trans_detail' found in repository
+ (=) table 'invoice_trans_detail' unchanged
+ 
+ Table 'invoice_trans_factor' found in repository
+ (=) table 'invoice_trans_factor' unchanged
+ 
+ Table 'invoice_trans_relation' found in repository
+ (=) table 'invoice_trans_relation' unchanged
+ 
+ Table 'invoice_trans_source' found in repository
+ (=) table 'invoice_trans_source' unchanged
+ 
+ Table 'invoice_trans_status' found in repository
+ (=) table 'invoice_trans_status' unchanged
+ 
+ Table 'invoice_trans_status_history' found in repository
+ (=) table 'invoice_trans_status_history' unchanged
+ 
+ Table 'invoice_trans_tax' found in repository
+ (=) table 'invoice_trans_tax' unchanged
+ 
+ Table 'order_trans' found in repository
+ (=) table 'order_trans' unchanged
+ 
+ Table 'order_trans_detail' found in repository
+ (=) table 'order_trans_detail' unchanged
+ 
+ Table 'order_trans_factor' found in repository
+ (=) table 'order_trans_factor' unchanged
+ 
+ Table 'order_trans_source' found in repository
+ (=) table 'order_trans_source' unchanged
+ 
+ Table 'order_trans_status' found in repository
+ (=) table 'order_trans_status' unchanged
+ 
+ Table 'order_trans_status_history' found in repository
+ (=) table 'order_trans_status_history' unchanged
+ 
+ Table 'safe' found in repository
+ (=) table 'safe' unchanged
+ 
+ Table 'safe_expense' found in repository
+ (=) table 'safe_expense' unchanged
+ 
+ Table 'safe_trans' found in repository
+ (=) table 'safe_trans' unchanged
+ 
+ Table 'safe_trans_source' found in repository
+ (=) table 'safe_trans_source' unchanged
+ 
+ Table 'sale_campaign' found in repository
+ (=) table 'sale_campaign' unchanged
+ 
+ Table 'sale_seller' found in repository
+ (=) table 'sale_seller' unchanged
+ 
+ Table 'stock' found in repository
+ (=) table 'stock' unchanged
+ 
+ Table 'stock_barcode' found in repository
+ (=) table 'stock_barcode' unchanged
+ 
+ Table 'stock_category' found in repository
+ (=) table 'stock_category' unchanged
+ 
+ Table 'stock_cost_factor' found in repository
+ (=) table 'stock_cost_factor' unchanged
+ 
+ Table 'stock_costing' found in repository
+ (=) table 'stock_costing' unchanged
+ 
+ Table 'stock_costing_detail' found in repository
+ (=) table 'stock_costing_detail' unchanged
+ 
+ Table 'stock_costing_inventory' found in repository
+ (=) table 'stock_costing_inventory' unchanged
+ 
+ Table 'stock_depot' found in repository
+ (=) table 'stock_depot' unchanged
+ 
+ Table 'stock_extra_fields' found in repository
+ (=) table 'stock_extra_fields' unchanged
+ 
+ Table 'stock_price_list' found in repository
+ (=) table 'stock_price_list' unchanged
+ 
+ Table 'stock_price_update' found in repository
+ (=) table 'stock_price_update' unchanged
+ 
+ Table 'stock_price_update_detail' found in repository
+ (=) table 'stock_price_update_detail' unchanged
+ 
+ Table 'stock_trans' found in repository
+ (=) table 'stock_trans' unchanged
+ 
+ Table 'stock_trans_currency' found in repository
+ (=) table 'stock_trans_currency' unchanged
+ 
+ Table 'stock_trans_detail' found in repository
+ (=) table 'stock_trans_detail' unchanged
+ 
+ Table 'stock_trans_factor' found in repository
+ (=) table 'stock_trans_factor' unchanged
+ 
+ Table 'stock_trans_source' found in repository
+ (=) table 'stock_trans_source' unchanged
+ 
+ Table 'stock_trans_tax' found in repository
+ (=) table 'stock_trans_tax' unchanged
+ 
+ Table 'stock_unit' found in repository
+ (=) table 'stock_unit' unchanged
+ 
+ Table 'temp_contact_aging' found in repository
+ . Column 'id' added
+ (*) table 'temp_contact_aging' updated : 1 change(s)
+ 
+ Table 'waybill_trans' found in repository
+ (=) table 'waybill_trans' unchanged
+ 
+ Table 'waybill_trans_detail' found in repository
+ (=) table 'waybill_trans_detail' unchanged
+ 
+ Table 'waybill_trans_factor' found in repository
+ (=) table 'waybill_trans_factor' unchanged
+ 
+ Table 'waybill_trans_relation' found in repository
+ (=) table 'waybill_trans_relation' unchanged
+ 
+ Table 'waybill_trans_source' found in repository
+ (=) table 'waybill_trans_source' unchanged
+ 
+ Table 'waybill_trans_status' found in repository
+ (=) table 'waybill_trans_status' unchanged
+ 
+ Table 'waybill_trans_status_history' found in repository
+ (=) table 'waybill_trans_status_history' unchanged

@@ -1,0 +1,99 @@
+<div xmlns:s="http://www.springframework.org/tags" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:directive.page contentType="text/html;charset=UTF-8" />
+<jsp:output omit-xml-declaration="yes" />
+	<s:message var="app_name" code="application_name" htmlEscape="false" />
+	<s:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
+    
+    <div class="container">
+		<h3>
+			<s:message code="welcome_h3" arguments="${app_name}" />
+		</h3>
+      
+		<ul class="entity">
+            <li><a href="adminDocument">AdminDocument</a></li>
+            <li><a href="adminDocumentField">AdminDocumentField</a></li>
+            <li><a href="adminDocumentTarget">AdminDocumentTarget</a></li>
+            <li><a href="adminExtraFields">AdminExtraFields</a></li>
+            <li><a href="adminSetting">AdminSetting</a></li>
+            <li><a href="adminUser">AdminUser</a></li>
+            <li><a href="adminUserAudit">AdminUserAudit</a></li>
+            <li><a href="adminUserGivenRole">AdminUserGivenRole</a></li>
+            <li><a href="adminUserGroup">AdminUserGroup</a></li>
+            <li><a href="adminUserRight">AdminUserRight</a></li>
+            <li><a href="adminUserRole">AdminUserRole</a></li>
+            <li><a href="adminWorkspace">AdminWorkspace</a></li>
+            <li><a href="bank">Bank</a></li>
+            <li><a href="bankExpense">BankExpense</a></li>
+            <li><a href="bankTrans">BankTrans</a></li>
+            <li><a href="bankTransSource">BankTransSource</a></li>
+            <li><a href="chqbllDetailHistory">ChqbllDetailHistory</a></li>
+            <li><a href="chqbllDetailPartial">ChqbllDetailPartial</a></li>
+            <li><a href="chqbllPayroll">ChqbllPayroll</a></li>
+            <li><a href="chqbllPayrollDetail">ChqbllPayrollDetail</a></li>
+            <li><a href="chqbllPayrollSource">ChqbllPayrollSource</a></li>
+            <li><a href="chqbllTrans">ChqbllTrans</a></li>
+            <li><a href="chqbllTransDetail">ChqbllTransDetail</a></li>
+            <li><a href="chqbllType">ChqbllType</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="contactCategory">ContactCategory</a></li>
+            <li><a href="contactExtraFields">ContactExtraFields</a></li>
+            <li><a href="contactTrans">ContactTrans</a></li>
+            <li><a href="contactTransSource">ContactTransSource</a></li>
+            <li><a href="globalCurrency">GlobalCurrency</a></li>
+            <li><a href="globalCurrencyRate">GlobalCurrencyRate</a></li>
+            <li><a href="globalCurrencyRateDetail">GlobalCurrencyRateDetail</a></li>
+            <li><a href="globalPrivateCode">GlobalPrivateCode</a></li>
+            <li><a href="globalProfile">GlobalProfile</a></li>
+            <li><a href="globalTransPoint">GlobalTransPoint</a></li>
+            <li><a href="invoiceTrans">InvoiceTrans</a></li>
+            <li><a href="invoiceTransCurrency">InvoiceTransCurrency</a></li>
+            <li><a href="invoiceTransDetail">InvoiceTransDetail</a></li>
+            <li><a href="invoiceTransFactor">InvoiceTransFactor</a></li>
+            <li><a href="invoiceTransRelation">InvoiceTransRelation</a></li>
+            <li><a href="invoiceTransSource">InvoiceTransSource</a></li>
+            <li><a href="invoiceTransStatus">InvoiceTransStatus</a></li>
+            <li><a href="invoiceTransStatusHistory">InvoiceTransStatusHistory</a></li>
+            <li><a href="invoiceTransTax">InvoiceTransTax</a></li>
+            <li><a href="orderTrans">OrderTrans</a></li>
+            <li><a href="orderTransDetail">OrderTransDetail</a></li>
+            <li><a href="orderTransFactor">OrderTransFactor</a></li>
+            <li><a href="orderTransSource">OrderTransSource</a></li>
+            <li><a href="orderTransStatus">OrderTransStatus</a></li>
+            <li><a href="orderTransStatusHistory">OrderTransStatusHistory</a></li>
+            <li><a href="safe">Safe</a></li>
+            <li><a href="safeExpense">SafeExpense</a></li>
+            <li><a href="safeTrans">SafeTrans</a></li>
+            <li><a href="safeTransSource">SafeTransSource</a></li>
+            <li><a href="saleCampaign">SaleCampaign</a></li>
+            <li><a href="saleSeller">SaleSeller</a></li>
+            <li><a href="stock">Stock</a></li>
+            <li><a href="stockBarcode">StockBarcode</a></li>
+            <li><a href="stockCategory">StockCategory</a></li>
+            <li><a href="stockCostFactor">StockCostFactor</a></li>
+            <li><a href="stockCosting">StockCosting</a></li>
+            <li><a href="stockCostingDetail">StockCostingDetail</a></li>
+            <li><a href="stockCostingInventory">StockCostingInventory</a></li>
+            <li><a href="stockDepot">StockDepot</a></li>
+            <li><a href="stockExtraFields">StockExtraFields</a></li>
+            <li><a href="stockPriceList">StockPriceList</a></li>
+            <li><a href="stockPriceUpdate">StockPriceUpdate</a></li>
+            <li><a href="stockPriceUpdateDetail">StockPriceUpdateDetail</a></li>
+            <li><a href="stockTrans">StockTrans</a></li>
+            <li><a href="stockTransCurrency">StockTransCurrency</a></li>
+            <li><a href="stockTransDetail">StockTransDetail</a></li>
+            <li><a href="stockTransFactor">StockTransFactor</a></li>
+            <li><a href="stockTransSource">StockTransSource</a></li>
+            <li><a href="stockTransTax">StockTransTax</a></li>
+            <li><a href="stockUnit">StockUnit</a></li>
+            <li><a href="tempContactAging">TempContactAging</a></li>
+            <li><a href="waybillTrans">WaybillTrans</a></li>
+            <li><a href="waybillTransDetail">WaybillTransDetail</a></li>
+            <li><a href="waybillTransFactor">WaybillTransFactor</a></li>
+            <li><a href="waybillTransRelation">WaybillTransRelation</a></li>
+            <li><a href="waybillTransSource">WaybillTransSource</a></li>
+            <li><a href="waybillTransStatus">WaybillTransStatus</a></li>
+            <li><a href="waybillTransStatusHistory">WaybillTransStatusHistory</a></li>
+	    </ul>
+
+    </div> <!-- /container -->
+</div>

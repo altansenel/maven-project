@@ -1,0 +1,402 @@
+
+GENERATOR VARIABLES :
+=====================
+
+* GENERATOR 
+$generator.name    = Telosys Tools Generator
+$generator.version = 2.1.1 
+
+* CURRENT DATE AND TIME 
+$today.date = 24 Þub 2016
+$today.time = 15:13:29
+$today.date("dd/MM/yyyy") = 24/02/2016
+$today.time("HH:mm")      = 15:13
+
+
+GENERATOR CONSTANTS FOR SPECIAL CHARACTERS :
+============================================
+$DOLLAR = $
+$SHARP  = #
+$AMP    = &
+$QUOT   = "
+$LT     = <
+$GT     = >
+$LBRACE = {
+$RBRACE = }
+
+GENERATOR CONSTANTS USABLE AS METHODS PARAMETERS :
+==================================================
+$const.KEY          =  1
+$const.NOT_KEY      =  2
+
+$const.TEXT         =  4
+$const.NOT_TEXT     =  8
+
+$const.IN_LINKS     =  16
+$const.NOT_IN_LINKS =  32
+
+$const.IN_SELECTED_LINKS      = 64
+$const.NOT_IN_SELECTED_LINKS  = 128
+
+$const.getKEY()     = 1
+$const.getNOT_KEY() = 2 
+
+
+PROJECT VARIABLES :
+===================
+
+Project packages ( predefined variables ) :
+$ROOT_PKG   = "org.demo"
+$ENTITY_PKG = "org.demo.bean"
+
+Project folders ( predefined variables ) :
+$SRC      = "src/main/java"
+$RES      = "src/main/resources"
+$WEB      = "src/main/webapp"
+$TEST_SRC = "src/test/java"
+$TEST_RES = "src/test/resources"
+$DOC      = "doc"
+$TMP      = "tmp"
+
+Project variables ( $project.variables ) including predefined variables :
+ . $WEB = src/main/webapp
+ . $ENTITY_PKG = org.demo.bean
+ . $TEST_SRC = src/test/java
+ . $RES = src/main/resources
+ . $DBID = 1
+ . $DOC = doc
+ . $ROOT_PKG = org.demo
+ . $MYVAR = foo
+ . $SRC = src/main/java
+ . $TEST_RES = src/test/resources
+ . $V2 = 22
+ . $TMP = tmp
+
+
+ENTITY VARIABLES :
+==================
+
+* BEAN CLASS
+$entity.name            = StockTransSource
+$fn.uncapitalize($entity.name) = stockTransSource
+$entity.package         = org.demo.bean
+$entity.databaseTable   = stock_trans_source
+$entity.databaseCatalog = seyhan
+$entity.databaseSchema  = 
+
+* BEAN CLASS ATTRIBUTES ( $entity.attributes )
+$entity.attributes.size() = 11 
+$attributes.size() = 11 
+
+* BEAN CLASS JPA ANNOTATIONS ( $jpa.entityAnnotations(2) )
+  @Entity
+  @Table(name="stock_trans_source", catalog="seyhan" )
+
+* BEAN CLASS AUTOINCREMTED PRIMARY KEY ?
+ $entity.autoincrementedKeyAttribute.databaseName = id
+
+KEY ATTRIBUTES : 
+ . id : type = Integer , auto-incremented = true
+
+ ------------------------------
+ Field : id
+ ------------------------------
+ Java :
+  $field.name      = id
+  $field.type      = Integer
+  $field.getter    = getId
+  $field.setter    = setId
+  $field.label     = Id
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  @Column(name="id", nullable=false)
+
+ Database :
+  $field.isKeyElement() = true
+  $field.isAutoIncremented() = true
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : name
+ ------------------------------
+ Java :
+  $field.name      = name
+  $field.type      = String
+  $field.getter    = getName
+  $field.setter    = setName
+  $field.label     = Name
+  $field.inputType = text
+ Java bean validation annotations :
+  @NotNull
+  @Size( min = 1, max = 30 )
+ JPA annotations :
+  @Column(name="name", nullable=false, length=30)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = name
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 30
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : suitableRight
+ ------------------------------
+ Java :
+  $field.name      = suitableRight
+  $field.type      = String
+  $field.getter    = getSuitableRight
+  $field.setter    = setSuitableRight
+  $field.label     = Suitable right
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 30 )
+ JPA annotations :
+  @Column(name="suitable_right", length=30)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = suitable_right
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 30
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : hasCostEffect
+ ------------------------------
+ Java :
+  $field.name      = hasCostEffect
+  $field.type      = Boolean
+  $field.getter    = getHasCostEffect
+  $field.setter    = setHasCostEffect
+  $field.label     = Has cost effect
+  $field.inputType = checkbox
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="has_cost_effect")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = has_cost_effect
+  $field.databaseType = BIT
+  $field.jdbcTypeCode = -7
+  $field.databaseSize = 0
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 1
+
+ ------------------------------
+ Field : insertBy
+ ------------------------------
+ Java :
+  $field.name      = insertBy
+  $field.type      = String
+  $field.getter    = getInsertBy
+  $field.setter    = setInsertBy
+  $field.label     = Insert by
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 20 )
+ JPA annotations :
+  @Column(name="insert_by", length=20)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = insert_by
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 20
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : insertAt
+ ------------------------------
+ Java :
+  $field.name      = insertAt
+  $field.type      = Date
+  $field.getter    = getInsertAt
+  $field.setter    = setInsertAt
+  $field.label     = Insert at
+  $field.inputType = 
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name="insert_at")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = insert_at
+  $field.databaseType = DATETIME
+  $field.jdbcTypeCode = 93
+  $field.databaseSize = 19
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : updateBy
+ ------------------------------
+ Java :
+  $field.name      = updateBy
+  $field.type      = String
+  $field.getter    = getUpdateBy
+  $field.setter    = setUpdateBy
+  $field.label     = Update by
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 20 )
+ JPA annotations :
+  @Column(name="update_by", length=20)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = update_by
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 20
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : updateAt
+ ------------------------------
+ Java :
+  $field.name      = updateAt
+  $field.type      = Date
+  $field.getter    = getUpdateAt
+  $field.setter    = setUpdateAt
+  $field.label     = Update at
+  $field.inputType = 
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name="update_at")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = update_at
+  $field.databaseType = DATETIME
+  $field.jdbcTypeCode = 93
+  $field.databaseSize = 19
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : isActive
+ ------------------------------
+ Java :
+  $field.name      = isActive
+  $field.type      = Boolean
+  $field.getter    = getIsActive
+  $field.setter    = setIsActive
+  $field.label     = Is active
+  $field.inputType = checkbox
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="is_active")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = is_active
+  $field.databaseType = BIT
+  $field.jdbcTypeCode = -7
+  $field.databaseSize = 0
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 1
+
+ ------------------------------
+ Field : workspace
+ ------------------------------
+ Java :
+  $field.name      = workspace
+  $field.type      = Integer
+  $field.getter    = getWorkspace
+  $field.setter    = setWorkspace
+  $field.label     = Workspace
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Column(name="workspace", nullable=false)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = workspace
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : version
+ ------------------------------
+ Java :
+  $field.name      = version
+  $field.type      = Integer
+  $field.getter    = getVersion
+  $field.setter    = setVersion
+  $field.label     = Version
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="version")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = version
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = true
+  $field.databaseDefaultValue = 0
+

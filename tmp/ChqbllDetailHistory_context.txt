@@ -1,0 +1,376 @@
+
+GENERATOR VARIABLES :
+=====================
+
+* GENERATOR 
+$generator.name    = Telosys Tools Generator
+$generator.version = 2.1.1 
+
+* CURRENT DATE AND TIME 
+$today.date = 24 Þub 2016
+$today.time = 15:13:25
+$today.date("dd/MM/yyyy") = 24/02/2016
+$today.time("HH:mm")      = 15:13
+
+
+GENERATOR CONSTANTS FOR SPECIAL CHARACTERS :
+============================================
+$DOLLAR = $
+$SHARP  = #
+$AMP    = &
+$QUOT   = "
+$LT     = <
+$GT     = >
+$LBRACE = {
+$RBRACE = }
+
+GENERATOR CONSTANTS USABLE AS METHODS PARAMETERS :
+==================================================
+$const.KEY          =  1
+$const.NOT_KEY      =  2
+
+$const.TEXT         =  4
+$const.NOT_TEXT     =  8
+
+$const.IN_LINKS     =  16
+$const.NOT_IN_LINKS =  32
+
+$const.IN_SELECTED_LINKS      = 64
+$const.NOT_IN_SELECTED_LINKS  = 128
+
+$const.getKEY()     = 1
+$const.getNOT_KEY() = 2 
+
+
+PROJECT VARIABLES :
+===================
+
+Project packages ( predefined variables ) :
+$ROOT_PKG   = "org.demo"
+$ENTITY_PKG = "org.demo.bean"
+
+Project folders ( predefined variables ) :
+$SRC      = "src/main/java"
+$RES      = "src/main/resources"
+$WEB      = "src/main/webapp"
+$TEST_SRC = "src/test/java"
+$TEST_RES = "src/test/resources"
+$DOC      = "doc"
+$TMP      = "tmp"
+
+Project variables ( $project.variables ) including predefined variables :
+ . $WEB = src/main/webapp
+ . $ENTITY_PKG = org.demo.bean
+ . $TEST_SRC = src/test/java
+ . $RES = src/main/resources
+ . $DBID = 1
+ . $DOC = doc
+ . $ROOT_PKG = org.demo
+ . $MYVAR = foo
+ . $SRC = src/main/java
+ . $TEST_RES = src/test/resources
+ . $V2 = 22
+ . $TMP = tmp
+
+
+ENTITY VARIABLES :
+==================
+
+* BEAN CLASS
+$entity.name            = ChqbllDetailHistory
+$fn.uncapitalize($entity.name) = chqbllDetailHistory
+$entity.package         = org.demo.bean
+$entity.databaseTable   = chqbll_detail_history
+$entity.databaseCatalog = seyhan
+$entity.databaseSchema  = 
+
+* BEAN CLASS ATTRIBUTES ( $entity.attributes )
+$entity.attributes.size() = 10 
+$attributes.size() = 10 
+
+* BEAN CLASS JPA ANNOTATIONS ( $jpa.entityAnnotations(2) )
+  @Entity
+  @Table(name="chqbll_detail_history", catalog="seyhan" )
+
+* BEAN CLASS AUTOINCREMTED PRIMARY KEY ?
+ $entity.autoincrementedKeyAttribute.databaseName = id
+
+KEY ATTRIBUTES : 
+ . id : type = Integer , auto-incremented = true
+
+ ------------------------------
+ Field : id
+ ------------------------------
+ Java :
+  $field.name      = id
+  $field.type      = Integer
+  $field.getter    = getId
+  $field.setter    = setId
+  $field.label     = Id
+  $field.inputType = number
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Id
+  @GeneratedValue(strategy=GenerationType.AUTO)
+  @Column(name="id", nullable=false)
+
+ Database :
+  $field.isKeyElement() = true
+  $field.isAutoIncremented() = true
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : sort
+ ------------------------------
+ Java :
+  $field.name      = sort
+  $field.type      = String
+  $field.getter    = getSort
+  $field.setter    = setSort
+  $field.label     = Sort
+  $field.inputType = text
+ Java bean validation annotations :
+  @NotNull
+  @Size( min = 1, max = 6 )
+ JPA annotations :
+  @Column(name="sort", nullable=false, length=6)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = sort
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 6
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : stepDate
+ ------------------------------
+ Java :
+  $field.name      = stepDate
+  $field.type      = Date
+  $field.getter    = getStepDate
+  $field.setter    = setStepDate
+  $field.label     = Step date
+  $field.inputType = date
+ Java bean validation annotations :
+  @NotNull
+ JPA annotations :
+  @Temporal(TemporalType.DATE)
+  @Column(name="step_date", nullable=false)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = step_date
+  $field.databaseType = DATE
+  $field.jdbcTypeCode = 91
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : step
+ ------------------------------
+ Java :
+  $field.name      = step
+  $field.type      = String
+  $field.getter    = getStep
+  $field.setter    = setStep
+  $field.label     = Step
+  $field.inputType = text
+ Java bean validation annotations :
+  @NotNull
+  @Size( min = 1, max = 15 )
+ JPA annotations :
+  @Column(name="step", nullable=false, length=15)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = step
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 15
+  $field.isDatabaseNotNull = true
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : insertBy
+ ------------------------------
+ Java :
+  $field.name      = insertBy
+  $field.type      = String
+  $field.getter    = getInsertBy
+  $field.setter    = setInsertBy
+  $field.label     = Insert by
+  $field.inputType = text
+ Java bean validation annotations :
+  @Size( max = 20 )
+ JPA annotations :
+  @Column(name="insert_by", length=20)
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = insert_by
+  $field.databaseType = VARCHAR
+  $field.jdbcTypeCode = 12
+  $field.databaseSize = 20
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : insertAt
+ ------------------------------
+ Java :
+  $field.name      = insertAt
+  $field.type      = Date
+  $field.getter    = getInsertAt
+  $field.setter    = setInsertAt
+  $field.label     = Insert at
+  $field.inputType = 
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Temporal(TemporalType.TIMESTAMP)
+  @Column(name="insert_at")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = false
+  $field.databaseName = insert_at
+  $field.databaseType = DATETIME
+  $field.jdbcTypeCode = 93
+  $field.databaseSize = 19
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : detailId
+ ------------------------------
+ Java :
+  $field.name      = detailId
+  $field.type      = Integer
+  $field.getter    = getDetailId
+  $field.setter    = setDetailId
+  $field.label     = Detail id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="detail_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = detail_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : contactId
+ ------------------------------
+ Java :
+  $field.name      = contactId
+  $field.type      = Integer
+  $field.getter    = getContactId
+  $field.setter    = setContactId
+  $field.label     = Contact id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="contact_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = contact_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : bankId
+ ------------------------------
+ Java :
+  $field.name      = bankId
+  $field.type      = Integer
+  $field.getter    = getBankId
+  $field.setter    = setBankId
+  $field.label     = Bank id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="bank_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = bank_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
+ ------------------------------
+ Field : safeId
+ ------------------------------
+ Java :
+  $field.name      = safeId
+  $field.type      = Integer
+  $field.getter    = getSafeId
+  $field.setter    = setSafeId
+  $field.label     = Safe id
+  $field.inputType = number
+ Java bean validation annotations :
+
+ JPA annotations :
+  @Column(name="safe_id")
+
+ Database :
+  $field.isKeyElement() = false
+  $field.isAutoIncremented() = false
+  $field.isUsedInForeignKey() = true
+  $field.databaseName = safe_id
+  $field.databaseType = INT
+  $field.jdbcTypeCode = 4
+  $field.databaseSize = 10
+  $field.isDatabaseNotNull = false
+  $field.hasDatabaseDefaultValue() = false
+  $field.databaseDefaultValue = 
+
